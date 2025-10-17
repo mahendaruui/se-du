@@ -17,7 +17,7 @@ import {
     CheckCircle2,
     Sparkles
 } from 'lucide-react';
-import { login, register } from '@/routes';
+import { login } from '@/routes';
 import { cn } from '@/lib/utils';
 import { SparklesCore } from '@/components/ui/sparkles';
 import { BackgroundBeams } from '@/components/ui/background-beams';
@@ -100,14 +100,9 @@ export default function Home({ services = [], partners = [] }: HomeProps) {
                                     <Link href="/dashboard">Dashboard</Link>
                                 </Button>
                             ) : (
-                                <>
-                                    <Button asChild variant="ghost" size="sm">
-                                        <Link href={login()}>Masuk</Link>
-                                    </Button>
-                                    <Button asChild size="sm">
-                                        <Link href={register()}>Daftar</Link>
-                                    </Button>
-                                </>
+                                <Button asChild size="sm">
+                                    <Link href={login()}>Masuk Admin</Link>
+                                </Button>
                             )}
                         </div>
                     </div>

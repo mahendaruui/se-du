@@ -13,7 +13,7 @@ import {
     BookOpen,
     GraduationCap
 } from 'lucide-react';
-import { login, register } from '@/routes';
+import { login } from '@/routes';
 
 export default function About() {
     const { auth } = usePage<SharedData>().props;
@@ -63,14 +63,9 @@ export default function About() {
                                     <Link href="/dashboard">Dashboard</Link>
                                 </Button>
                             ) : (
-                                <>
-                                    <Button asChild variant="ghost" size="sm">
-                                        <Link href={login()}>Masuk</Link>
-                                    </Button>
-                                    <Button asChild size="sm">
-                                        <Link href={register()}>Daftar</Link>
-                                    </Button>
-                                </>
+                                <Button asChild size="sm">
+                                    <Link href={login()}>Masuk Admin</Link>
+                                </Button>
                             )}
                         </div>
                     </div>
