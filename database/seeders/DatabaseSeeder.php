@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'admin@sedu.test'],
             [
                 'name' => 'Administrator SE-DU',
-                'password' => 'password',
+                'password' => 'Admin123!',
                 'role' => 'admin',
                 'email_verified_at' => now(),
             ]
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'staff@sedu.test'],
             [
                 'name' => 'Staff SE-DU',
-                'password' => 'password',
+                'password' => 'Staff123!',
                 'role' => 'staff',
                 'email_verified_at' => now(),
             ]
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'koordinator@sedu.test'],
             [
                 'name' => 'Koordinator SE-DU',
-                'password' => 'password',
+                'password' => 'Koordinator123!',
                 'role' => 'staff',
                 'email_verified_at' => now(),
             ]
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'operator@sedu.test'],
             [
                 'name' => 'Operator SE-DU',
-                'password' => 'password',
+                'password' => 'Operator123!',
                 'role' => 'operator',
                 'email_verified_at' => now(),
             ]
@@ -60,7 +60,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'helpdesk@sedu.test'],
             [
                 'name' => 'Helpdesk SE-DU',
-                'password' => 'password',
+                'password' => 'Helpdesk123!',
                 'role' => 'operator',
                 'email_verified_at' => now(),
             ]

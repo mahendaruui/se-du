@@ -149,13 +149,17 @@ php artisan migrate --seed
 
 **Default User Credentials** (setelah seeding):
 
-| Role     | Email                 | Password | Akses            |
-| -------- | --------------------- | -------- | ---------------- |
-| Admin    | admin@sedu.test       | password | Full access      |
-| Staff    | staff@sedu.test       | password | Mengelola konten |
-| Staff    | koordinator@sedu.test | password | Mengelola konten |
-| Operator | operator@sedu.test    | password | Akses terbatas   |
-| Operator | helpdesk@sedu.test    | password | Akses terbatas   |
+| Role     | Email                 | Password        | Akses            |
+| -------- | --------------------- | --------------- | ---------------- |
+| Admin    | admin@sedu.test       | Admin123!       | Full access      |
+| Staff    | staff@sedu.test       | Staff123!       | Mengelola konten |
+| Staff    | koordinator@sedu.test | Koordinator123! | Mengelola konten |
+| Operator | operator@sedu.test    | Operator123!    | Akses terbatas   |
+| Operator | helpdesk@sedu.test    | Helpdesk123!    | Akses terbatas   |
+
+**Ketentuan Password:**
+
+- ✅ Min 8 karakter | ✅ 1 huruf kapital | ✅ 1 huruf kecil | ✅ 1 angka | ✅ 1 simbol
 
 > ⚠️ **PENTING**: Ubah password default segera setelah login pertama kali! Lihat [CREDENTIALS.md](CREDENTIALS.md) untuk detail lengkap.
 

@@ -26,7 +26,7 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => static::$password ??= 'password',
+            'password' => static::$password ??= 'Password123!', // Default password yang memenuhi ketentuan
             'role' => 'operator', // Default role
             'remember_token' => Str::random(10),
             'two_factor_secret' => Str::random(10),
