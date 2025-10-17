@@ -70,8 +70,12 @@ export default function Home({ services = [], partners = [] }: HomeProps) {
                                 className="h-12 w-12 object-contain"
                             />
                             <div>
-                                <h1 className="text-lg font-bold leading-tight">SE-DU</h1>
-                                <p className="text-xs text-muted-foreground">Sentral Disabilitas Ubudiyah</p>
+                                <h1 className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-lg font-bold leading-tight text-transparent">
+                                    SE-DU
+                                </h1>
+                                <p className="text-xs font-medium text-muted-foreground/80">
+                                    Sentral Disabilitas Ubudiyah
+                                </p>
                             </div>
                         </Link>
                         <nav className="hidden items-center gap-6 md:flex">

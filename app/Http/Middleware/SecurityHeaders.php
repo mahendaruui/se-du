@@ -29,14 +29,25 @@ class SecurityHeaders
         // Referrer Policy
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
 
-        // Content Security Policy - strict untuk production
+        // Content Security Policy - dengan support untuk Vite dev server
+        $scriptSrc = "'self' 'unsafe-inline' 'unsafe-eval'";
+        $connectSrc = "'self'";
+
+        // Izinkan Vite dev server di development environment
+        if (app()->environment('local')) {
+            $vitePort = env('VITE_PORT', 5173);
+            $viteUrl = "https://se-du.test:{$vitePort}";
+            $scriptSrc .= " {$viteUrl}";
+            $connectSrc .= " {$viteUrl} ws://se-du.test:{$vitePort} wss://se-du.test:{$vitePort}";
+        }
+
         $csp = [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // unsafe-eval needed for Vite in dev
-            "style-src 'self' 'unsafe-inline' https://fonts.bunny.net",
-            "font-src 'self' https://fonts.bunny.net",
+            "script-src {$scriptSrc}",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+            "font-src 'self' https://fonts.gstatic.com",
             "img-src 'self' data: https:",
-            "connect-src 'self'",
+            "connect-src {$connectSrc}",
             "frame-ancestors 'self'",
             "base-uri 'self'",
             "form-action 'self'",
