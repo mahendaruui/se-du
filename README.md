@@ -380,6 +380,14 @@ Jika Anda menemukan masalah keamanan, mohon hubungi tim SE-DU melalui email resm
 
 ---
 
+## 🔒 Sebelum Prod
+
+```
+APP_ENV=production
+APP_DEBUG=false
+SESSION_SECURE_COOKIE=true
+```
+
 ## 📄 License
 
 Platform SE-DU dikembangkan oleh Universitas Ubudiyah Indonesia untuk kepentingan layanan disabilitas kampus.
