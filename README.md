@@ -143,12 +143,21 @@ php artisan key:generate
 # Create database (jika menggunakan SQLite)
 New-Item -ItemType File -Path database\database.sqlite -Force
 
-# Run migrations
-php artisan migrate
-
-# (Optional) Seed database dengan data dummy
-php artisan db:seed
+# Run migrations and seed database
+php artisan migrate --seed
 ```
+
+**Default User Credentials** (setelah seeding):
+
+| Role     | Email                 | Password | Akses            |
+| -------- | --------------------- | -------- | ---------------- |
+| Admin    | admin@sedu.test       | password | Full access      |
+| Staff    | staff@sedu.test       | password | Mengelola konten |
+| Staff    | koordinator@sedu.test | password | Mengelola konten |
+| Operator | operator@sedu.test    | password | Akses terbatas   |
+| Operator | helpdesk@sedu.test    | password | Akses terbatas   |
+
+> ⚠️ **PENTING**: Ubah password default segera setelah login pertama kali! Lihat [CREDENTIALS.md](CREDENTIALS.md) untuk detail lengkap.
 
 ### 5. Build Frontend Assets
 

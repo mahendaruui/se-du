@@ -13,15 +13,62 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
+        // Create Admin User
         User::firstOrCreate(
-            ['email' => 'test@example.com'],
+            ['email' => 'admin@sedu.test'],
             [
-                'name' => 'Test User',
+                'name' => 'Administrator SE-DU',
                 'password' => 'password',
+                'role' => 'admin',
                 'email_verified_at' => now(),
             ]
         );
+
+        // Create Staff Users
+        User::firstOrCreate(
+            ['email' => 'staff@sedu.test'],
+            [
+                'name' => 'Staff SE-DU',
+                'password' => 'password',
+                'role' => 'staff',
+                'email_verified_at' => now(),
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'koordinator@sedu.test'],
+            [
+                'name' => 'Koordinator SE-DU',
+                'password' => 'password',
+                'role' => 'staff',
+                'email_verified_at' => now(),
+            ]
+        );
+
+        // Create Operator Users
+        User::firstOrCreate(
+            ['email' => 'operator@sedu.test'],
+            [
+                'name' => 'Operator SE-DU',
+                'password' => 'password',
+                'role' => 'operator',
+                'email_verified_at' => now(),
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'helpdesk@sedu.test'],
+            [
+                'name' => 'Helpdesk SE-DU',
+                'password' => 'password',
+                'role' => 'operator',
+                'email_verified_at' => now(),
+            ]
+        );
+
+        // Optional: Create test users with different roles using factory
+        // User::factory(3)->admin()->create();
+        // User::factory(5)->staff()->create();
+        // User::factory(2)->operator()->create();
     }
 }
